@@ -49,6 +49,7 @@
 * **Complex Animation Duration:** [e.g., 400ms for screen transitions]
 * **Easing Curve:** [e.g., `EaseInOut` or specific cubic-bezier like `cubic-bezier(0.4, 0.0, 0.2, 1)`]
 * **Feedback:** [e.g., All clickable items must have a ripple effect (Android) or opacity fade (iOS) upon tap].
+* **Reference Tools:** See `docs/design/references/README.md` § External Reference Tools for asset, transition, and animation references (smoothui.dev, transitions.dev, godly.design, animos.app, backgrounds.supply) and their agent/MCP integration status.
 
 ## ♿ 5. Accessibility (a11y)
 *Mandatory rules to ensure the app is usable by everyone.*
