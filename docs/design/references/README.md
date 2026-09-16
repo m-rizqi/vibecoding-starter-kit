@@ -27,3 +27,20 @@ As the "Vibecoder", you need to feed the AI's creativity. Words alone are often 
 ### Best Practices:
 * **Name files descriptively.** Instead of `image1.png`, use `reference-login-minimalist-dark.png`. This helps text-based AI agents understand the intent even without seeing the image.
 * **Keep it focused.** Don't clutter this folder with 50 different images. Pick 3-5 strong references that perfectly capture the vibe you want.
+
+---
+
+## 🔗 External Reference Tools (assets, transitions, animation)
+
+> **[🤖 AI AGENT INSTRUCTIONS]**
+> When building or styling frontend UI in phase 2 (`source-codes/{frontend,mobile}`), consult these sites for visual assets, transitions, and animation patterns — alongside the moodboards in this folder and the hard rules in `docs/pra-development/8-UI-UX-GUIDELINES.md`. Referenced in `.claude/rules/04-frontend-standards.md`.
+
+| Site | What it's for | Agent integration |
+|---|---|---|
+| [smoothui.dev](https://smoothui.dev) | React + Tailwind + Shadcn/ui + Motion component library with polished animations | **MCP connected** — generic `shadcn` MCP server registered in `.mcp.json` (`npx shadcn@latest mcp`, no API key). Once a shadcn-based frontend is scaffolded, add `"registries": {"@smoothui": "https://smoothui.dev/r/{name}.json"}` to that project's `components.json` to pull components through the MCP server. |
+| [transitions.dev](https://transitions.dev) | Copy-paste UI transitions for web apps | No MCP server. Ships a coding-agent **skill** (`transitions.dev/skill.html`) — install that skill in-project when transitions work starts, or copy-paste snippets directly. No API key for the free tier; Pro tier is a paid subscription. |
+| [godly.design](https://godly.design) | Curated gallery of bold/experimental web design | No official MCP or API. Browse manually for inspiration. (An unofficial third-party MCP — `notsointresting/design-inspiration-mcp` — wraps this site via a `browse_godly` tool; deliberately **not installed**, since it's an unverified third party running arbitrary code against this project. Revisit only if the user explicitly asks to trust it.) |
+| [animos.app](https://animos.app) | Turns static designs into motion showcases | No MCP/API yet (on their roadmap). Browse manually; revisit once they ship one. |
+| [backgrounds.supply](https://backgrounds.supply) | Procedural/curated background asset packs (gradients, textures) | No MCP/API. Premium downloads require sign-in at `app.backgrounds.supply` — **not connected** (browse-only reference for now, per user decision). Ask the user again if a specific project needs premium asset downloads. |
+
+**Note:** a sixth site, `dec.gallery`, does not resolve (DNS failure) — skipped per user decision. If the intended site turns out to be `deck.gallery` (deck/presentation design inspiration) or something else, tell the AI agent the correct URL and this table gets updated.
